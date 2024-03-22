@@ -1,19 +1,17 @@
 #!/usr/bin/python3
-"""Will start a Flask Web application.
-
-The application listens on 0.0.0.0, port 5000.
-Routes:
-    /: Displays 'Hello HBNB!'
+"""Will start a Flask Web Aplicationsp
 """
 
 from flask import Flask
 app = Flask(__name__)
 
-@app.route('/')
-def hello_hbnb():
-    """Displays 'Hello HBNB!'"""
-    return "Hello HBNB!"
 
-if __name__ == "__main__":
+@app.route('/')
+def hello_flask():
+    """Return string when route queried
+    """
+    return 'Hello HBNB!'
+
+if __name__ == '__main__':
     app.url_map.strict_slashes = False
-    app.run(host="0.0.0.0")
+    app.run(host='0.0.0.0', port=5000)
