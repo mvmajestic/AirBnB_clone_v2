@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Will start Web Application with two routings
+"""Will start a Flask Web application.
+
+The application listens on 0.0.0.0, port 5000.
+Routes:
+    /: Displays 'Hello HBNB!'.
+    /hbnb: Displays 'HBNB'.
 """
 
 from flask import Flask
